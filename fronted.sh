@@ -1,4 +1,5 @@
-log_file=/tmp/expense.log
+source common.sh
+
 echo installing nginx
 dnf install nginx -y >> $log_file
 
@@ -16,6 +17,6 @@ cd /usr/share/nginx/html
 echo extracting fronted code
 unzip /tmp/frontend.zip >> $log_file
 
-echo start & enable nginx server
+echo starting Nginx server
 systemctl enable nginx >> $log_file
 systemctl restart nginx >> $log_file
