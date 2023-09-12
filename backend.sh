@@ -48,5 +48,5 @@ stat_check
 
 echo Load Schema
 mysql_root_password=$1
-mysql -h mysql.snehithdops.online -uroot -p$mysql_root_password < /app/schema/backend.sql &>>$log_file
+mysql -h mysql.snehithdops.online -uroot -p $mysql_root_password < /app/schema/backend.sql &>>$log_file
 stat_check
